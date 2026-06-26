@@ -1,370 +1,900 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Golden Yolk - Home</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Source+Sans+3:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-surface": "#1e1b18",
-                      "surface-variant": "#e9e1dc",
-                      "tertiary-fixed": "#f1dfd1",
-                      "secondary-fixed": "#e3e2df",
-                      "inverse-on-surface": "#f8efea",
-                      "on-secondary": "#ffffff",
-                      "tertiary-fixed-dim": "#d4c4b6",
-                      "surface-bright": "#fff8f5",
-                      "on-secondary-fixed-variant": "#464744",
-                      "primary-fixed": "#ffdea8",
-                      "surface": "#fff8f5",
-                      "on-tertiary-fixed": "#231a11",
-                      "error": "#ba1a1a",
-                      "on-tertiary-container": "#5b4f45",
-                      "outline": "#837560",
-                      "secondary": "#5e5f5c",
-                      "on-secondary-fixed": "#1b1c1a",
-                      "secondary-container": "#e0e0dc",
-                      "background": "#fff8f5",
-                      "surface-container": "#f5ece7",
-                      "on-primary": "#ffffff",
-                      "on-tertiary-fixed-variant": "#50453b",
-                      "on-surface-variant": "#514532",
-                      "surface-container-low": "#fbf2ed",
-                      "primary-container": "#ffb800",
-                      "surface-container-high": "#efe6e2",
-                      "tertiary": "#695c51",
-                      "on-error-container": "#93000a",
-                      "on-error": "#ffffff",
-                      "surface-container-lowest": "#ffffff",
-                      "surface-container-highest": "#e9e1dc",
-                      "error-container": "#ffdad6",
-                      "surface-tint": "#7c5800",
-                      "secondary-fixed-dim": "#c7c7c3",
-                      "inverse-primary": "#ffba20",
-                      "tertiary-container": "#d2c2b4",
-                      "on-primary-container": "#6b4c00",
-                      "outline-variant": "#d5c4ab",
-                      "on-primary-fixed": "#271900",
-                      "on-primary-fixed-variant": "#5e4200",
-                      "inverse-surface": "#34302c",
-                      "primary-fixed-dim": "#ffba20",
-                      "on-secondary-container": "#626360",
-                      "on-tertiary": "#ffffff",
-                      "surface-dim": "#e1d8d4",
-                      "on-background": "#1e1b18",
-                      "primary": "#7c5800"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "gutter": "24px",
-                      "margin-mobile": "20px",
-                      "margin-desktop": "64px",
-                      "section-gap": "128px",
-                      "container-max": "1200px",
-                      "unit": "8px"
-              },
-              "fontFamily": {
-                      "headline-md": [
-                              "Playfair Display"
-                      ],
-                      "headline-xl": [
-                              "Playfair Display"
-                      ],
-                      "headline-lg": [
-                              "Playfair Display"
-                      ],
-                      "body-lg": [
-                              "\"Source Sans 3\""
-                      ],
-                      "headline-lg-mobile": [
-                              "Playfair Display"
-                      ],
-                      "quote": [
-                              "Playfair Display"
-                      ],
-                      "body-md": [
-                              "\"Source Sans 3\""
-                      ],
-                      "label-caps": [
-                              "\"Source Sans 3\""
-                      ]
-              },
-              "fontSize": {
-                      "headline-md": [
-                              "32px",
-                              {
-                                      "lineHeight": "40px",
-                                      "fontWeight": "600"
-                              }
-                      ],
-                      "headline-xl": [
-                              "64px",
-                              {
-                                      "lineHeight": "72px",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "headline-lg": [
-                              "48px",
-                              {
-                                      "lineHeight": "56px",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "body-lg": [
-                              "20px",
-                              {
-                                      "lineHeight": "32px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-lg-mobile": [
-                              "32px",
-                              {
-                                      "lineHeight": "40px",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "quote": [
-                              "24px",
-                              {
-                                      "lineHeight": "36px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "24px",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "label-caps": [
-                              "12px",
-                              {
-                                      "lineHeight": "16px",
-                                      "letterSpacing": "0.1em",
-                                      "fontWeight": "700"
-                              }
-                      ]
-              }
-      },
-          },
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Nest Farm - Premium Quality Eggs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      </script>
-<style>
-        .material-symbols-outlined {
-          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            overflow-x: hidden;
         }
-      </style>
-<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.left-4{left:1rem}.top-0{top:0px}.top-4{top:1rem}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-8{margin-top:2rem}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[4\/3\]{aspect-ratio:4/3}.aspect-square{aspect-ratio:1 / 1}.h-\[819px\]{height:819px}.h-full{height:100%}.h-px{height:1px}.min-h-\[600px\]{min-height:600px}.w-16{width:4rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-container-max{max-width:1200px}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-16{gap:4rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-gutter{gap:24px}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:0.125rem}.rounded-full{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-outline{--tw-border-opacity:1;border-color:rgb(131 117 96 / var(--tw-border-opacity, 1))}.border-outline-variant{--tw-border-opacity:1;border-color:rgb(213 196 171 / var(--tw-border-opacity, 1))}.bg-background{--tw-bg-opacity:1;background-color:rgb(255 248 245 / var(--tw-bg-opacity, 1))}.bg-on-surface\/40{background-color:rgb(30 27 24 / 0.4)}.bg-outline{--tw-bg-opacity:1;background-color:rgb(131 117 96 / var(--tw-bg-opacity, 1))}.bg-primary-container{--tw-bg-opacity:1;background-color:rgb(255 184 0 / var(--tw-bg-opacity, 1))}.bg-surface{--tw-bg-opacity:1;background-color:rgb(255 248 245 / var(--tw-bg-opacity, 1))}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(245 236 231 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(251 242 237 / var(--tw-bg-opacity, 1))}.bg-surface-tint{--tw-bg-opacity:1;background-color:rgb(124 88 0 / var(--tw-bg-opacity, 1))}.bg-surface-variant{--tw-bg-opacity:1;background-color:rgb(233 225 220 / var(--tw-bg-opacity, 1))}.bg-tertiary{--tw-bg-opacity:1;background-color:rgb(105 92 81 / var(--tw-bg-opacity, 1))}.bg-cover{background-size:cover}.bg-center{background-position:center}.object-cover{object-fit:cover}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.px-margin-mobile{padding-left:20px;padding-right:20px}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-section-gap{padding-top:128px;padding-bottom:128px}.pb-4{padding-bottom:1rem}.text-center{text-align:center}.font-body-lg{font-family:"Source Sans 3"}.font-body-md{font-family:"Source Sans 3"}.font-headline-lg-mobile{font-family:Playfair Display}.font-headline-md{font-family:Playfair Display}.font-label-caps{font-family:"Source Sans 3"}.font-quote{font-family:Playfair Display}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-body-lg{font-size:20px;line-height:32px;font-weight:400}.text-body-md{font-size:16px;line-height:24px;font-weight:400}.text-headline-lg-mobile{font-size:32px;line-height:40px;font-weight:700}.text-headline-md{font-size:32px;line-height:40px;font-weight:600}.text-label-caps{font-size:12px;line-height:16px;letter-spacing:0.1em;font-weight:700}.text-quote{font-size:24px;line-height:36px;font-weight:400}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-bold{font-weight:700}.tracking-tight{letter-spacing:-0.025em}.text-on-background{--tw-text-opacity:1;color:rgb(30 27 24 / var(--tw-text-opacity, 1))}.text-on-primary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-on-primary-container{--tw-text-opacity:1;color:rgb(107 76 0 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(30 27 24 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(81 69 50 / var(--tw-text-opacity, 1))}.text-on-tertiary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(124 88 0 / var(--tw-text-opacity, 1))}.text-surface-bright{--tw-text-opacity:1;color:rgb(255 248 245 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-sm{--tw-drop-shadow:drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.selection\:bg-primary-container *::selection{--tw-bg-opacity:1;background-color:rgb(255 184 0 / var(--tw-bg-opacity, 1))}.selection\:text-on-primary-container *::selection{--tw-text-opacity:1;color:rgb(107 76 0 / var(--tw-text-opacity, 1))}.selection\:bg-primary-container::selection{--tw-bg-opacity:1;background-color:rgb(255 184 0 / var(--tw-bg-opacity, 1))}.selection\:text-on-primary-container::selection{--tw-text-opacity:1;color:rgb(107 76 0 / var(--tw-text-opacity, 1))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-primary-container:hover{--tw-border-opacity:1;border-color:rgb(255 184 0 / var(--tw-border-opacity, 1))}.hover\:bg-primary-container:hover{--tw-bg-opacity:1;background-color:rgb(255 184 0 / var(--tw-bg-opacity, 1))}.hover\:bg-surface-variant:hover{--tw-bg-opacity:1;background-color:rgb(233 225 220 / var(--tw-bg-opacity, 1))}.hover\:text-on-primary-container:hover{--tw-text-opacity:1;color:rgb(107 76 0 / var(--tw-text-opacity, 1))}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(124 88 0 / var(--tw-text-opacity, 1))}.hover\:opacity-80:hover{opacity:0.8}.hover\:shadow-\[0_24px_48px_-12px_rgba\(74\2c 63\2c 53\2c 0\.1\)\]:hover{--tw-shadow:0 24px 48px -12px rgba(74,63,53,0.1);--tw-shadow-colored:0 24px 48px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 768px){.md\:mb-0{margin-bottom:0px}.md\:flex{display:flex}.md\:inline-flex{display:inline-flex}.md\:hidden{display:none}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:gap-8{gap:2rem}.md\:px-margin-desktop{padding-left:64px;padding-right:64px}.md\:text-left{text-align:left}.md\:text-right{text-align:right}.md\:font-headline-lg{font-family:Playfair Display}.md\:font-headline-xl{font-family:Playfair Display}.md\:text-headline-lg{font-size:48px;line-height:56px;letter-spacing:-0.01em;font-weight:700}.md\:text-headline-xl{font-size:64px;line-height:72px;letter-spacing:-0.02em;font-weight:700}}@media (min-width: 1024px){.lg\:order-1{order:1}.lg\:order-2{order:2}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.left-4{left:1rem}.top-0{top:0px}.top-4{top:1rem}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-8{margin-top:2rem}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[4\/3\]{aspect-ratio:4/3}.aspect-square{aspect-ratio:1 / 1}.h-\[819px\]{height:819px}.h-full{height:100%}.h-px{height:1px}.min-h-\[600px\]{min-height:600px}.w-16{width:4rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-container-max{max-width:1200px}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-16{gap:4rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-gutter{gap:24px}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.rounded{border-radius:0.125rem}.rounded-full{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-outline{--tw-border-opacity:1;border-color:rgb(131 117 96 / var(--tw-border-opacity, 1))}.border-outline-variant{--tw-border-opacity:1;border-color:rgb(213 196 171 / var(--tw-border-opacity, 1))}.bg-background{--tw-bg-opacity:1;background-color:rgb(255 248 245 / var(--tw-bg-opacity, 1))}.bg-on-surface\/40{background-color:rgb(30 27 24 / 0.4)}.bg-outline{--tw-bg-opacity:1;background-color:rgb(131 117 96 / var(--tw-bg-opacity, 1))}.bg-primary-container{--tw-bg-opacity:1;background-color:rgb(255 184 0 / var(--tw-bg-opacity, 1))}.bg-surface{--tw-bg-opacity:1;background-color:rgb(255 248 245 / var(--tw-bg-opacity, 1))}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(245 236 231 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(251 242 237 / var(--tw-bg-opacity, 1))}.bg-surface-tint{--tw-bg-opacity:1;background-color:rgb(124 88 0 / var(--tw-bg-opacity, 1))}.bg-surface-variant{--tw-bg-opacity:1;background-color:rgb(233 225 220 / var(--tw-bg-opacity, 1))}.bg-tertiary{--tw-bg-opacity:1;background-color:rgb(105 92 81 / var(--tw-bg-opacity, 1))}.bg-cover{background-size:cover}.bg-center{background-position:center}.object-cover{object-fit:cover}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.px-margin-mobile{padding-left:20px;padding-right:20px}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-section-gap{padding-top:128px;padding-bottom:128px}.pb-4{padding-bottom:1rem}.text-center{text-align:center}.font-body-lg{font-family:"Source Sans 3"}.font-body-md{font-family:"Source Sans 3"}.font-headline-lg-mobile{font-family:Playfair Display}.font-headline-md{font-family:Playfair Display}.font-label-caps{font-family:"Source Sans 3"}.font-quote{font-family:Playfair Display}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-body-lg{font-size:20px;line-height:32px;font-weight:400}.text-body-md{font-size:16px;line-height:24px;font-weight:400}.text-headline-lg-mobile{font-size:32px;line-height:40px;font-weight:700}.text-headline-md{font-size:32px;line-height:40px;font-weight:600}.text-label-caps{font-size:12px;line-height:16px;letter-spacing:0.1em;font-weight:700}.text-quote{font-size:24px;line-height:36px;font-weight:400}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-bold{font-weight:700}.tracking-tight{letter-spacing:-0.025em}.text-on-background{--tw-text-opacity:1;color:rgb(30 27 24 / var(--tw-text-opacity, 1))}.text-on-primary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-on-primary-container{--tw-text-opacity:1;color:rgb(107 76 0 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(30 27 24 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(81 69 50 / var(--tw-text-opacity, 1))}.text-on-tertiary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(124 88 0 / var(--tw-text-opacity, 1))}.text-surface-bright{--tw-text-opacity:1;color:rgb(255 248 245 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-sm{--tw-drop-shadow:drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.selection\:bg-primary-container *::selection{--tw-bg-opacity:1;background-color:rgb(255 184 0 / var(--tw-bg-opacity, 1))}.selection\:text-on-primary-container *::selection{--tw-text-opacity:1;color:rgb(107 76 0 / var(--tw-text-opacity, 1))}.selection\:bg-primary-container::selection{--tw-bg-opacity:1;background-color:rgb(255 184 0 / var(--tw-bg-opacity, 1))}.selection\:text-on-primary-container::selection{--tw-text-opacity:1;color:rgb(107 76 0 / var(--tw-text-opacity, 1))}.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-primary-container:hover{--tw-border-opacity:1;border-color:rgb(255 184 0 / var(--tw-border-opacity, 1))}.hover\:bg-primary-container:hover{--tw-bg-opacity:1;background-color:rgb(255 184 0 / var(--tw-bg-opacity, 1))}.hover\:bg-surface-variant:hover{--tw-bg-opacity:1;background-color:rgb(233 225 220 / var(--tw-bg-opacity, 1))}.hover\:text-on-primary-container:hover{--tw-text-opacity:1;color:rgb(107 76 0 / var(--tw-text-opacity, 1))}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(124 88 0 / var(--tw-text-opacity, 1))}.hover\:opacity-80:hover{opacity:0.8}.hover\:shadow-\[0_24px_48px_-12px_rgba\(74\2c 63\2c 53\2c 0\.1\)\]:hover{--tw-shadow:0 24px 48px -12px rgba(74,63,53,0.1);--tw-shadow-colored:0 24px 48px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 768px){.md\:mb-0{margin-bottom:0px}.md\:flex{display:flex}.md\:inline-flex{display:inline-flex}.md\:hidden{display:none}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:gap-8{gap:2rem}.md\:px-margin-desktop{padding-left:64px;padding-right:64px}.md\:text-left{text-align:left}.md\:text-right{text-align:right}.md\:font-headline-lg{font-family:Playfair Display}.md\:font-headline-xl{font-family:Playfair Display}.md\:text-headline-lg{font-size:48px;line-height:56px;letter-spacing:-0.01em;font-weight:700}.md\:text-headline-xl{font-size:64px;line-height:72px;letter-spacing:-0.02em;font-weight:700}}@media (min-width: 1024px){.lg\:order-1{order:1}.lg\:order-2{order:2}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
-<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container" data-mode="connect">
-<!-- TopNavBar -->
-<nav class="sticky top-0 z-50 bg-surface border-b border-outline-variant w-full">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<!-- Brand -->
-<a class="font-headline-md text-headline-md font-bold text-primary" href="#">Eden Nest</a>
-<!-- Navigation Links (Web) -->
-<div class="hidden md:flex gap-gutter items-center">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Shop</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Our Story</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Recipes</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Farms</a>
-</div>
-<!-- Actions -->
-<div class="flex gap-4 items-center text-primary">
-<button aria-label="Shopping Basket" class="hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined" data-icon="shopping_basket">shopping_basket</span>
-</button>
-<button aria-label="User Profile" class="hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-</button>
-<button aria-label="Menu" class="md:hidden hover:opacity-80 transition-opacity">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
-</button>
-</div>
-</div>
-</nav>
-<!-- Main Canvas -->
-<main>
-<!-- Hero Section -->
-<section class="relative w-full h-[819px] min-h-[600px] flex items-center justify-center">
-<!-- Background Image -->
-<div class="absolute inset-0 z-0 bg-surface-variant">
-<div class="bg-cover bg-center w-full h-full object-cover" data-alt="A stunning, macro-level photograph of a perfectly cooked, rich golden egg yolk gently breaking and cascading over a slice of thick, rustic artisanal sourdough toast. The scene is illuminated by warm, natural morning light filtering through a nearby window, creating a high-end, editorial food photography aesthetic. The lighting highlights the glossy texture of the yolk and the crusty edges of the bread. The color palette is dominated by warm ambers, deep golden hues, and the earthy, tactile textures of the rustic setting, perfectly capturing an 'Elevated Agrarianism' style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJjvsoxH7ixbUFbzRC10O50E6Shhd_nN7aGBbWGpfn3qwp1-mKHJ9InCQrHZE900rcMS3wTcj5jZi2Ocs4UZwP0a_gRxk5egM8XXXw09OKpoMZYRUA2QlmDVAZRkfWIZqydYXdk9nb3-wHoJ6_saEyDw0xx_yC7M7WTtaecOreVpSao-urU31ljBWWwpGJWVNjK8xzDeR1t1TGaWgilNMBHCjINb1XgC8j87dATFeV4SGAiHXy8SiYIjNdqiOtupAIuJCUDKBKK-ov')"></div>
-<div class="absolute inset-0 bg-on-surface/40"></div> <!-- Subtle dark overlay for text legibility -->
-</div>
-<!-- Hero Content -->
-<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center text-on-primary">
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl mb-6 tracking-tight drop-shadow-md">
-                    Uncompromising Quality,<br/>Straight from the Source.
-                </h1>
-<p class="font-quote text-quote mb-10 max-w-2xl mx-auto drop-shadow-sm text-surface-bright">
-                    Experience the rich, heritage taste of eggs raised with intention and care.
-                </p>
-<a class="inline-flex items-center justify-center bg-primary-container text-on-primary-container font-label-caps text-label-caps px-8 py-4 rounded hover:-translate-y-1 hover:shadow-lg transition-all duration-300" href="#">
-                    Explore Our Offerings
-                </a>
-</div>
-</section>
-<!-- The Gold Standard (Quality Promise) -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
-<div class="max-w-container-max mx-auto">
-<div class="text-center mb-16">
-<h2 class="font-headline-md text-headline-md text-primary mb-4">The Gold Standard</h2>
-<div class="w-16 h-px bg-outline mx-auto mb-6"></div>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
-                        We believe that true luxury begins at the roots. Our commitment to ethical farming practices, superior nutrition, and heritage breeds results in an egg that is fundamentally different—richer, more flavorful, and nutrient-dense.
-                    </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Feature 1 -->
-<div class="flex flex-col items-center text-center p-8 border border-outline-variant bg-surface">
-<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="egg_alt">egg_alt</span>
-<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-3">Heritage Breeds</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                            Our flocks consist entirely of carefully selected heritage breeds, known for producing robust, flavorful eggs with exceptionally vibrant yolks.
-                        </p>
-</div>
-<!-- Feature 2 -->
-<div class="flex flex-col items-center text-center p-8 border border-outline-variant bg-surface">
-<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="grass">grass</span>
-<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-3">Pasture Raised</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                            True pasture raising means our hens spend their days foraging outdoors, resulting in a naturally diverse diet and a profoundly superior product.
-                        </p>
-</div>
-<!-- Feature 3 -->
-<div class="flex flex-col items-center text-center p-8 border border-outline-variant bg-surface">
-<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="handshake">handshake</span>
-<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-3">Artisanal Care</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">
-                            Every egg is gathered, inspected, and packed by hand. We prioritize quality over volume in every step of our process.
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Straight from the Farm (Local Sourcing) -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
-<div class="max-w-container-max mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="order-2 lg:order-1">
-<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-6">Straight from the Farm</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Our network of small, independent farms shares a unified philosophy: agriculture should replenish the land, not deplete it. By supporting local agrarians who practice regenerative farming, we ensure that every carton of Eden Nest supports a sustainable, ethical food system.</p>
-<a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-on-surface border border-outline px-6 py-3 hover:bg-surface-variant transition-colors duration-200" href="#">
-                            Meet Our Farmers
-                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<div class="order-1 lg:order-2 relative aspect-[4/3] bg-surface-variant border border-outline-variant">
-<div class="bg-cover bg-center w-full h-full" data-alt="A cinematic, wide-angle shot of a serene, lush green pasture at dawn, bathed in warm, golden hour sunlight. Several healthy, heritage breed hens are seen foraging naturally in the tall grass. The scene evokes a deep sense of 'Elevated Agrarianism', showcasing ethical farming practices. The lighting is soft and natural, emphasizing the organic textures of the landscape. The overall mood is peaceful, authentic, and rooted in nature, aligning with a premium, farm-to-table brand aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOz3Vfthz-GrIxVIJrUrpD030uu1fBGBF2EM2WBQUs0BIG1UYb-AxNOKUaTwDqOKLYZtm_5ijgjUSKQmaymqwwCB4GAkhu4Kc0-FLtIsUcDm1XxdYQdc8FnYZYQB5z0O8yiMZXe76NQRU2qmVTNpzeE6e8vD1zD4RBhUIt0CL1EFbFDCGkY1yWJ7JNQTP8tz3TCo7ACmolb4dkhW5oBr-hv5HGNEiPbjzKt133RS2imtTBp4ZnVJfWkQKqfsoI1iufy8G_ijy-LPWh')"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Customer Favorites Product Carousel -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container">
-<div class="max-w-container-max mx-auto">
-<div class="flex justify-between items-end mb-12 border-b border-outline-variant pb-4">
-<h2 class="font-headline-md text-headline-md text-primary">Customer Favorites</h2>
-<a class="hidden md:inline-flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">
-                        View All
-                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<!-- Product Card 1 -->
-<div class="group cursor-pointer bg-surface border border-outline-variant hover:shadow-[0_24px_48px_-12px_rgba(74,63,53,0.1)] transition-all duration-300">
-<div class="aspect-square bg-surface-container-low relative overflow-hidden">
-<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist, high-end product shot of a premium, unbleached, textured cardboard egg carton sitting on a clean, light cream surface. The carton is open, revealing a dozen beautiful, varied-color heritage eggs (shades of deep brown, pale blue, and cream). The lighting is bright, soft, and directional, creating a modern, editorial aesthetic typical of luxury food brands. The composition is clean, emphasizing the organic shapes of the eggs against the tactile packaging." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9n_0_LJIpV6dKrFiJiJ6DjRCpjP2IU7w3wWhB6x2eC2vsgYccR1xIE9GnGUWYnCeoENC8_uwXkwmcjgK24HK-maj9aFZAdlhCTR_TK_7q5yLBMYXLIAL95Fkue-ymot7Y6njKy658E4CVU2ybxoJnHVGa9b7qj4XP1bfwa1VilrgvEiGxm8d-5_xWvjEiK2q-QRCGQtxZnAe9xrBQUFn1VhLHhK5YcydpHw4Ohol62ursbS1gnOu9lkw8VESeOczkAp_eomLLBSDn')"></div>
-<div class="absolute top-4 left-4">
-<span class="inline-block bg-tertiary text-on-tertiary font-label-caps text-label-caps px-3 py-1 rounded-full">Pasture Raised</span>
-</div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">Heritage Dozen</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4">$8.50</p>
-<button class="w-full border border-outline text-on-surface font-label-caps text-label-caps py-2 hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container transition-colors duration-200">Add to Basket</button>
-</div>
-</div>
-<!-- Product Card 2 -->
-<div class="group cursor-pointer bg-surface border border-outline-variant hover:shadow-[0_24px_48px_-12px_rgba(74,63,53,0.1)] transition-all duration-300">
-<div class="aspect-square bg-surface-container-low relative overflow-hidden">
-<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated product shot of a half-dozen premium eggs arranged elegantly on a dark, rustic wooden block. The eggs feature striking, speckled shells. The lighting is moody and directional, highlighting the natural textures and creating a rich, earthy atmosphere. The background is a soft, out-of-focus parchment tone. This image conveys a sense of rare, artisanal quality and culinary excellence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsNsNMOILNVGk231IRIpT8DjtlSQg86vVSmVcwWV0hpRqm3g6GNvb1q_oybf4SPL9MhZSemlGfLQ1uHdasC8rhWg66zJxI6YCI94dhPK46y02Y9ZAplC9g6H78cK0QZpwXT1ZtqWPihr8ovnvfxub_udwhqPDt0f5bwcQfPkJg5oUqeUqSjkzcXmmc8Fct7VJL7n6Bg6uS8AEJYjBl55iywPeEYuzoWXz1rZXd52Z7IRFOeTyFc28JWJG-2wN4pgDeCF_aatzgWgTq')"></div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">Speckled Half-Dozen</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4">$5.00</p>
-<button class="w-full border border-outline text-on-surface font-label-caps text-label-caps py-2 hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container transition-colors duration-200">Add to Basket</button>
-</div>
-</div>
-<!-- Product Card 3 -->
-<div class="group cursor-pointer bg-surface border border-outline-variant hover:shadow-[0_24px_48px_-12px_rgba(74,63,53,0.1)] transition-all duration-300">
-<div class="aspect-square bg-surface-container-low relative overflow-hidden">
-<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A bright, editorial style photograph of a premium, golden-yolk egg cracked open into a beautiful, handcrafted ceramic bowl. The focus is incredibly sharp on the vibrant, raised yolk, showcasing its rich color and quality. The setting includes scattered artisanal flour and a wooden whisk on a light, marble countertop. The lighting is high-key and fresh, emphasizing a modern minimalist culinary environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0lJr2hgevl-jp-2ot6xCCuMPw2aQdB2Sixfm66tatjDLu7FrS5WaTIexMXXY6KZF_bA9i7QdVUjKJLZXR8KgmeuOP_aMOnj6h9FiTXEOV1xpXtNrOECnd3wAKpsJWetXcGbsd4wUipTmK04j186rQlQMwleQTU-CtwSXbN1WUVqmpKRp7tvRB32CxTg-7J0U6RY9N3yIOaAPnTaF-WPEkQQPw7DkdBXOdMLlnsb5q22YiCWbciRGBDnO_3gLk3-SOOjV1XRS8hI6l')"></div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">Baker's Dozen</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4">$9.50</p>
-<button class="w-full border border-outline text-on-surface font-label-caps text-label-caps py-2 hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container transition-colors duration-200">Add to Basket</button>
-</div>
-</div>
-<!-- Product Card 4 -->
-<div class="group cursor-pointer bg-surface border border-outline-variant hover:shadow-[0_24px_48px_-12px_rgba(74,63,53,0.1)] transition-all duration-300">
-<div class="aspect-square bg-surface-container-low relative overflow-hidden">
-<div class="bg-cover bg-center w-full h-full group-hover:scale-105 transition-transform duration-500" data-alt="A beautifully styled flat-lay photograph featuring a premium jar of artisanal mayonnaise made from golden yolk eggs, placed next to a rustic, linen napkin and silver cutlery. The jar label is minimalist and elegant. The background is a soft, warm cream color with very subtle, organic textures. The lighting is soft and diffused, creating a luxurious, gourmet aesthetic that complements an 'Elevated Agrarianism' brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAweFwgH0UlXYa9rDEw98bM_hJp7ImXBAt27QovSC48APl1q_HxJczpA4GdHayM-uerZMrX7ncxVVEvyFxrEXjHdxC2gtDGuQAL_8RezueLHU2U41uZXUpFSunu4WFeLoDORRpl25uEYBOsvouZUBfDGnNHxFggs81_RdtJSiwM-5nIyqwtGGzF8i5392jxTI8Yr9acMhjIJOIZIdWWEZjSH6xsBGk4WNz-B25tBtjdejGIpHRvZP57l4xQ7ZU95v3oBVZYuJlJFABk')"></div>
-<div class="absolute top-4 left-4">
-<span class="inline-block bg-surface-tint text-on-primary font-label-caps text-label-caps px-3 py-1 rounded-full">New Arrival</span>
-</div>
-</div>
-<div class="p-6">
-<h3 class="font-headline-md text-body-lg font-bold text-on-surface mb-2">Golden Mayonnaise</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4">$12.00</p>
-<button class="w-full border border-outline text-on-surface font-label-caps text-label-caps py-2 hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container transition-colors duration-200">Add to Basket</button>
-</div>
-</div>
-</div>
-<div class="mt-8 text-center md:hidden">
-<a class="inline-flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant" href="#">
-                        View All Offerings
-                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container border-t border-outline-variant">
-<div class="w-full py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
-<!-- Brand Logo -->
-<div class="font-headline-md text-headline-md text-on-surface text-center md:text-left mb-8 md:mb-0">Eden Nest</div>
-<!-- Links -->
-<div class="flex flex-wrap justify-center gap-6 md:gap-8 mb-8 md:mb-0">
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Animal Welfare</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
-</div>
-<!-- Copyright -->
-<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">© 2024 Eden Nest. All Rights Reserved.</div>
-</div>
-</footer>
-</body></html>
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-text-block {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        .logo-title {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #2e7d32;
+            letter-spacing: 1px;
+        }
+        .logo-tagline {
+            font-size: 0.6rem;
+            color: #8b6914;
+            font-style: italic;
+            letter-spacing: 0.3px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #d4a574;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #d4a574;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff8f0 0%, #ffe8cc 50%, #ffd4a3 100%);
+            padding: 100px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 200, 100, 0.3), transparent);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #8b4513;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #d4a574 0%, #b8914d 100%);
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 165, 116, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #8b4513;
+            padding: 14px 40px;
+            border: 2px solid #d4a574;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: #fff8f0;
+            transform: translateY(-3px);
+        }
+        
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            height: 400px;
+            margin: 2rem auto 0;
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Section Styles */
+        .section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 30px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            color: #8b4513;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 165, 116, 0.2);
+            border-color: #d4a574;
+        }
+        
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature-card h3 {
+            color: #8b4513;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Products Section */
+        .products {
+            background: linear-gradient(135deg, #fff9f5 0%, #f5ede5 100%);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #ffe8cc 0%, #ffd4a3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card:nth-child(1) .product-image {
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d4b8 100%);
+        }
+        
+        .product-card:nth-child(2) .product-image {
+            background: linear-gradient(135deg, #fff0e6 0%, #ffe8d4 100%);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #d4a574;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .product-body {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-body h3 {
+            color: #8b4513;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        
+        .product-body p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.7;
+        }
+        
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            color: #8b4513;
+            font-weight: 800;
+        }
+        
+        .price-label {
+            font-size: 0.85rem;
+            color: #999;
+            font-weight: 500;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #ffe8cc 0%, #ffd4a3 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 150px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .about-text h3 {
+            color: #8b4513;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .about-text p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #fff9f5 0%, #f5ede5 100%);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 15px 40px rgba(212, 165, 116, 0.2);
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-text {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            color: #8b4513;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #8b4513 0%, #6b3410 100%);
+            color: white;
+        }
+        
+        .contact .section-header h2,
+        .contact .section-header p {
+            color: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .contact-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .contact-item p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            padding: 13px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-family: inherit;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #d4a574;
+        }
+        
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .hero {
+                padding: 60px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-image {
+                height: 300px;
+                font-size: 80px;
+            }
+            
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-image {
+                height: 300px;
+                font-size: 100px;
+            }
+            
+            .product-image {
+                height: 200px;
+                font-size: 60px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .features-grid,
+            .products-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" height="62" width="62">
+                  <!-- Sunburst background -->
+                  <circle cx="31" cy="31" r="30" fill="#f9a825"/>
+                  <!-- Sunrays -->
+                  <g opacity="0.25" stroke="#fff" stroke-width="1.5">
+                    <line x1="31" y1="2" x2="31" y2="12"/>
+                    <line x1="31" y1="50" x2="31" y2="60"/>
+                    <line x1="2" y1="31" x2="12" y2="31"/>
+                    <line x1="50" y1="31" x2="60" y2="31"/>
+                    <line x1="10" y1="10" x2="18" y2="18"/>
+                    <line x1="44" y1="44" x2="52" y2="52"/>
+                    <line x1="52" y1="10" x2="44" y2="18"/>
+                    <line x1="10" y1="52" x2="18" y2="44"/>
+                  </g>
+                  <!-- Body -->
+                  <ellipse cx="31" cy="44" rx="14" ry="11" fill="white" stroke="#2e7d32" stroke-width="1.5"/>
+                  <!-- Wings -->
+                  <ellipse cx="18" cy="45" rx="7" ry="5" fill="white" stroke="#2e7d32" stroke-width="1"/>
+                  <ellipse cx="44" cy="45" rx="7" ry="5" fill="white" stroke="#2e7d32" stroke-width="1"/>
+                  <!-- Neck -->
+                  <rect x="26" y="29" width="10" height="9" fill="white"/>
+                  <!-- Head -->
+                  <circle cx="31" cy="23" r="10" fill="white" stroke="#2e7d32" stroke-width="1.5"/>
+                  <!-- Green Cap -->
+                  <path d="M20,22 Q31,9 42,22 Z" fill="#2e7d32"/>
+                  <rect x="18" y="21" width="26" height="4" rx="2" fill="#1b5e20"/>
+                  <!-- Eye -->
+                  <circle cx="35" cy="22" r="2.5" fill="#2e7d32"/>
+                  <circle cx="35.7" cy="21.2" r="0.8" fill="white"/>
+                  <!-- Beak -->
+                  <polygon points="38,25 45,28 38,31" fill="#f57f17"/>
+                  <!-- Comb -->
+                  <path d="M25,14 Q27,8 29,14 Q31,8 33,14" fill="#e53935"/>
+                  <!-- Bowtie -->
+                  <polygon points="25,35 30,38 25,41" fill="#2e7d32"/>
+                  <polygon points="37,35 32,38 37,41" fill="#2e7d32"/>
+                  <circle cx="31" cy="38" r="2" fill="#1b5e20"/>
+                  <!-- Egg in wing -->
+                  <ellipse cx="44" cy="43" rx="5" ry="6" fill="#f5deb3" stroke="#c8a96e" stroke-width="1"/>
+                  <!-- Green outline ring -->
+                  <circle cx="31" cy="31" r="30" fill="none" stroke="#2e7d32" stroke-width="2.5"/>
+                </svg>
+                <div class="logo-text-block">
+                    <div class="logo-title">EDEN NEST</div>
+                    <div class="logo-tagline">fresh eggs with faith and care</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Fresh, Premium Quality Eggs from Our Farm</h1>
+            <p class="hero-subtitle">Delivered Fresh Daily • Farm-Raised with Care • 100% Natural & Pure</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">Order Now</button>
+                <button class="btn-secondary">Learn More</button>
+            </div>
+            <div class="hero-image">🥚</div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Why Choose Eden Nest Farm?</h2>
+            <p>We deliver the finest quality eggs with exceptional care and commitment to your family's health</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">✨</span>
+                <h3>Perfectly Fresh</h3>
+                <p>Collected daily and delivered fresh to your doorstep within 24 hours. Peak nutrition and flavor guaranteed.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🌾</span>
+                <h3>Farm-Raised</h3>
+                <p>Happy, healthy hens in open pastures produce the best eggs. No cages, no confinement. Pure freedom.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">💚</span>
+                <h3>100% Natural</h3>
+                <p>No antibiotics, hormones, or artificial additives. Just pure, nutritious eggs from nature.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🚚</span>
+                <h3>Fast Delivery</h3>
+                <p>Quick and reliable doorstep delivery. Order today, receive tomorrow. Convenient for your lifestyle.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">⭐</span>
+                <h3>Premium Quality</h3>
+                <p>Strict quality checks at every step. Only the finest eggs reach your kitchen.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">👨‍🌾</span>
+                <h3>Expert Care</h3>
+                <p>35+ years of farming experience. We know how to raise healthy, productive hens.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="section-header">
+            <h2>About Eden Nest Farm</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-image">🌾</div>
+            <div class="about-text">
+                <h3>Quality You Can Trust</h3>
+                <p>Eden Nest Farm has been proudly serving our community with the freshest, highest-quality eggs for decades. We believe in sustainable farming practices that respect both nature and our hens.</p>
+                <p>Every egg is a promise of purity and quality. We maintain the highest standards of hygiene and animal welfare, ensuring that every dozen you receive is perfect.</p>
+                <p>Our commitment is simple: fresh, natural, and delicious eggs that you can trust for your family's table.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="section-header">
+            <h2>Our Products</h2>
+            <p>Premium eggs in various options to suit your needs</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    🥚
+                    <span class="product-badge">Best Seller</span>
+                </div>
+                <div class="product-body">
+                    <h3>Brown Eggs (Dozen)</h3>
+                    <p>Rich, golden-brown eggs packed with nutrition. Perfect for everyday cooking and baking. Our most popular choice!</p>
+                    <div class="product-footer">
+                        <div>
+                            <div class="price-label">Per Dozen</div>
+                            <div class="price">₹96</div>
+                        </div>
+                        <button class="btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    🥚
+                    <span class="product-badge">Premium</span>
+                </div>
+                <div class="product-body">
+                    <h3>White Eggs (Dozen)</h3>
+                    <p>Pristine white eggs with a mild flavor. Ideal for health-conscious families and specialized recipes.</p>
+                    <div class="product-footer">
+                        <div>
+                            <div class="price-label">Per Dozen</div>
+                            <div class="price">₹84</div>
+                        </div>
+                        <button class="btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Join thousands of happy families enjoying our fresh eggs</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The freshness is incredible! My family can taste the difference immediately. These are the best eggs we've ever had!"</p>
+                <p class="testimonial-author">- Rajesh Kumar, Kerala</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Excellent delivery service and amazing quality. I've been ordering for 6 months and never disappointed. Highly recommend!"</p>
+                <p class="testimonial-author">- Priya Sharma, Pathanamthitta</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Farm-fresh eggs that taste like home. Supporting local farmers never felt this good. Will definitely order again!"</p>
+                <p class="testimonial-author">- Arjun Nair, Kottayam</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Have questions? We'd love to hear from you!</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <h4>Farm Location</h4>
+                        <p>Inchappara Jn, Koodal P.O<br>Pathanamthitta, 689693<br>Kerala, India</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 7559065530</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@edennestfarm.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">⏰</span>
+                    <div>
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 7 AM - 7 PM<br>Saturday - Sunday: 8 AM - 6 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <input type="text" placeholder="Your Full Name" required>
+                <input type="email" placeholder="Your Email Address" required>
+                <input type="tel" placeholder="Your Phone Number" required>
+                <textarea placeholder="Tell us about your inquiry or special requirements..."></textarea>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Eden Nest Farm. All rights reserved. Premium Quality Eggs • Farm-Raised with Care | +91 7559065530</p>
+    </footer>
+    
+    <script>
+        // Smooth form submission
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
